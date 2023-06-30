@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Pet Suite">
+    <listeners>
+        <listener class-name="api.utilities.ExtentReportManager"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Pet Tests">
+        <classes>
+            <class name="api.tests.DDTests">
+        <methods>
+            <include name="testPostUser"/>
+            <include name="testDeleteUser"/>
+        </methods>
+    </class>
+<!--        <class name="api.tests.userTests">-->
+<!--            <methods>-->
+<!--                <include name="testPostUser"/>-->
+<!--                <include name="testGetUser"/>-->
+<!--                <include name="testUpdateUser"/>-->
+<!--                <include name="testDeleteUser"/>-->
+<!--            </methods>-->
+<!--        </class>-->
+            <class name="api.tests.userTests_WithRoutesProp">
+                <methods>
+                    <include name="testPostUser"/>
+                    <include name="testGetUser"/>
+                    <include name="testUpdateUser"/>
+                    <include name="testDeleteUser"/>
+                </methods>
+            </class>
+    </classes>
+    </test>
+</suite>
